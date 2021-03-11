@@ -44,7 +44,7 @@ public class TestCase2WEB {
 
             // Click to 'Kiralık'
             driver.findElement(By.cssSelector("#__layout > div > section.home-wrapper > div.home-search-wrap > div > div.middle.home-content > div > ul > li:nth-child(3) > a")).click();
-            sleep(5000);
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
             // Click to 'il' TextBox
             driver.findElement(By.cssSelector("#listPage > div.list-page-wrapper > div.wrapper.list-wrapper > div > div.left-content > div:nth-child(1) > section.listing-filter > div > section.locationSec > section.filter-item-wrap.loc.locationCitySec > div > div > div > div > div > div.he-select-base__container")).click();
@@ -56,7 +56,7 @@ public class TestCase2WEB {
 
             // Click to 'İlçe' TextBox
             driver.findElement(By.cssSelector("#listPage > div.list-page-wrapper > div.wrapper.list-wrapper > div > div.left-content > div:nth-child(1) > section.listing-filter > div > section.locationSec > section.filter-item-wrap.loc.locationCountySec > div > div > div > div.he-select-base__container")).click();
-            sleep(3000);
+            sleep(2000);
 
             //Click to SubTextBox Area
             driver.findElement(By.cssSelector("#listPage > div.list-page-wrapper > div.wrapper.list-wrapper > div > div.left-content > div:nth-child(1) > section.listing-filter > div > section.locationSec > section.filter-item-wrap.loc.locationCountySec > div > div > div > div.he-popper.he-select-base__dropdown > input")).sendKeys("Çankaya");

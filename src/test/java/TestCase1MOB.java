@@ -86,7 +86,7 @@ public class TestCase1MOB {
             driver.findElement(By.cssSelector("#dropdown-lightbox-district > div.dropdown-wrap > div.district-list-dialog > li:nth-child(7)")).click();
             sleep(2000);
 
-            // Tap to 'Uygula'hemlak-icon right-side
+            // Tap to 'Uygula'
             driver.findElement(By.cssSelector("#dropdown-lightbox-district > button")).click();
             sleep(1000);
 
@@ -134,7 +134,7 @@ public class TestCase1MOB {
 
             // Tap to 'Filtrele'
             driver.findElement(By.cssSelector("#app > div.listing-main-wrapper > div.listing > div.header-wrapper > div.list-basetab > div > button:nth-child(2)")).click();
-            sleep(5000);
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
             // Check firstFilterElement
             WebElement filter1 = driver.findElement(By.cssSelector("#app > div.listing-main-wrapper > div.listing > div.listing-wrapper.filter-wrapper > div > div.wrapper > div.tag-cloud > div > div > div > div > div.swiper-slide.swiper-slide-active > div > div > p"));
@@ -165,13 +165,12 @@ public class TestCase1MOB {
             if(filter4.getText().equals("2.000.000 TL"))
                 System.out.println("2.000.000 TL checked");
             sleep(3000);
+
             // Check fifthFilterElement
             WebElement filter5 = driver.findElement(By.cssSelector("#app > div.listing-main-wrapper > div.listing > div.listing-wrapper.filter-wrapper > div > div.wrapper > div.tag-cloud > div > div > div > div > div:nth-child(5) > div > div > p"));
             if(filter5.getText().equals("100.000 TL"))
                 System.out.println("100.000 TL checked");
-            sleep(5000);
-
-            driver.findElement(By.cssSelector("#app > div.listing-main-wrapper > div.listing > div.listing-wrapper.filter-wrapper > div > div.wrapper > div:nth-child(2) > div > ul > li.active > a")).click();
+            sleep(2000);
 
             //Drag to Clickable Area Of Filtered Options
             WebElement source2= driver.findElement(By.cssSelector("#app > div.listing-main-wrapper > div.listing > div.listing-wrapper.filter-wrapper > div > div.wrapper > div.tag-cloud > div > div > div > div > div:nth-child(4) > div > div > p"));

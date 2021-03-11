@@ -51,10 +51,12 @@ public class TestCase2MOB {
             // goes to https://www.hurriyetemlak.com
             driver.get(loginUrl);
 
-            // Tap to Cookie Button
-            WebElement cookiesButton = driver.findElement(By.cssSelector("#app > div.cookie-policy-wrapper > div.cookie-policy > button"));
-            cookiesButton.click();
-
+            // Tap to 'Kapat'
+            boolean checkButton = driver.findElement(By.cssSelector("#app > div.cookie-policy-wrapper > div.cookie-policy > button")).isDisplayed() ;
+            if(checkButton) {
+                WebElement cookieButton = driver.findElement(By.cssSelector("#app > div.cookie-policy-wrapper > div.cookie-policy > button"));
+                cookieButton.click();
+            }
             sleep(1000);
 
             // Tap to 'Kiralık'
